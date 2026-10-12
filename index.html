@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cuecheck — subtitle structure review</title>
+<style>
+:root{font-family:Inter,Arial,sans-serif;color:#202d32;background:#f7f6f2;font-synthesis:none}*{box-sizing:border-box}body{margin:0}button,a,input,textarea{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #287579;outline-offset:3px}.wrap{max-width:1160px;margin:auto;padding:0 36px}header{display:flex;align-items:center;justify-content:space-between;padding:28px 0;border-bottom:1px solid #d9dedb}.brand{font-weight:800;font-size:23px;letter-spacing:-1px}.brand span{color:#b54c2b}header p{font-size:12px;color:#526266;margin:0}main{padding:54px 0 30px}.eyebrow{font-size:11px;font-weight:700;letter-spacing:1.8px;color:#9b4024;text-transform:uppercase}h1{font-size:clamp(32px,4vw,49px);letter-spacing:-2px;line-height:1.12;max-width:620px;margin:14px 0 16px} .intro{color:#526266;line-height:1.65;max-width:650px;margin-bottom:34px}.workspace{display:grid;grid-template-columns:1fr 1.05fr;gap:24px;align-items:start}.panel{background:white;border:1px solid #d9dedb;border-radius:10px;overflow:hidden}.panel-head{display:flex;align-items:center;justify-content:space-between;padding:20px 22px;border-bottom:1px solid #e7ebe7}.panel-head h2{font-size:15px;margin:0}.step{font-size:11px;color:#647274;font-weight:normal;margin-right:10px}.inside{padding:22px}.drop{display:block;border:1px dashed #a9b5b3;border-radius:6px;padding:22px;text-align:center;cursor:pointer;background:#f8faf8}.drop strong{display:block;font-size:14px;margin-bottom:8px}.drop span{font-size:12px;color:#627172}input[type=file]{width:100%;margin-top:16px;font-size:12px}.or{font-size:11px;color:#68777a;margin:22px 0 10px;display:flex;justify-content:space-between}.text-button{background:none;border:0;color:#9b4024;text-decoration:underline;padding:0;font-size:12px}textarea{width:100%;height:230px;resize:vertical;padding:14px;border:1px solid #b8c3c2;border-radius:5px;background:#fbfcfa;font:12px/1.55 ui-monospace,monospace;color:#233b40} .primary{background:#203d41;color:#fff;border:0;border-radius:5px;padding:13px 20px;font-size:13px;font-weight:600;width:100%;margin-top:16px}.primary:hover{background:#30565a}.scope{font-size:11px;color:#617174;line-height:1.6;margin:14px 0 0}.empty{min-height:420px;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px}.empty .symbol{font:46px Georgia,serif;color:#9cadab;margin-bottom:24px}.empty h3{font-size:19px;margin:0 0 10px}.empty p{max-width:290px;font-size:13px;color:#617174;line-height:1.7}.error{background:#fff0e9;border-left:3px solid #b54c2b;margin:20px;padding:16px;font-size:13px;line-height:1.6}.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}.stat{background:#f4f7f4;border-radius:5px;padding:18px}.stat b{display:block;font-size:30px;font-weight:500;margin-bottom:4px}.stat span{font-size:12px;color:#586d6d}.note{font-size:12px;line-height:1.6;color:#526266;margin-bottom:16px}.issue{border-top:1px solid #e1e7e4;padding:13px 0;display:grid;grid-template-columns:64px 1fr;gap:12px;font-size:12px}.issue .cue{font:11px/1.6 ui-monospace,monospace;color:#6e7d7e}.issue strong{font-weight:600;color:#994329}.issue p{margin:5px 0 0;color:#647477;line-height:1.5}.issue-list{max-height:290px;overflow:auto}.downloads{display:flex;gap:10px;margin-top:22px}.downloads button{flex:1;padding:12px 8px;border:1px solid #b6c3bf;background:white;border-radius:5px;font-size:12px;color:#244549}.downloads button:hover{background:#f3f7f4}footer{margin:38px 0 20px;border-top:1px solid #d9dedb;padding-top:18px;display:flex;justify-content:space-between;gap:20px;font-size:11px;line-height:1.6;color:#677577}footer a{color:#465e61} .good{color:#286252!important}@media(max-width:750px){.wrap{padding:0 20px}header{padding:20px 0}header p{max-width:130px;text-align:right}.workspace{grid-template-columns:1fr}main{padding-top:34px}h1{letter-spacing:-1px}.empty{min-height:250px}footer{flex-direction:column;gap:8px}.inside{padding:18px}}
+</style></head><body><div class="wrap"><header><div class="brand">cue<span>check.</span></div><p>Offline subtitle structure review</p></header><main><div class="eyebrow">A clearer handoff, cue by cue</div><h1>Catch subtitle issues.<br>Keep the words intact.</h1><p class="intro">Check SRT and WebVTT structure, inspect timing warnings, and download a consistently numbered SRT. Your file stays in this browser.</p><div class="workspace"><section class="panel" aria-labelledby="source-title"><div class="panel-head"><h2 id="source-title"><span class="step">01</span> Add your subtitles</h2><span class="step">SRT / VTT · UTF-8</span></div><div class="inside"><label class="drop" for="file"><strong>Choose a subtitle file</strong><span>Local processing · up to 2 MB</span><input type="file" id="file" accept=".srt,.vtt,text/plain,text/vtt"></label><div class="or"><label for="source">OR PASTE SUBTITLE TEXT</label><button id="example" class="text-button">Try a sample</button></div><textarea id="source" spellcheck="false" placeholder="1&#10;00:00:01,000 --> 00:00:03,000&#10;Your subtitle text here." aria-describedby="scope"></textarea><button class="primary" id="check">Check & normalize</button><p class="scope" id="scope">Numbering and timestamp notation are normalized. Words, cue order and timings are preserved. This does not check audio sync or translation accuracy.</p></div></section><section class="panel" aria-labelledby="review-title"><div class="panel-head"><h2 id="review-title"><span class="step">02</span> Review your results</h2><span class="step" id="state-label">READY WHEN YOU ARE</span></div><div id="result" aria-live="polite"><div class="empty"><div><div class="symbol" aria-hidden="true">[ 00:00 ]</div><h3>Every cue has a place.</h3><p>Add a file or try the sample to see structural checks and download options.</p></div></div></div></section></div></main><footer><span>Self-initiated demo.<br>Local processing. No uploads or analytics.</span><span>For subtitle batch processing:<br><a href="mailto:brokerloadbrew@gmail.com">brokerloadbrew@gmail.com</a></span></footer></div><script type="module">
+const timing = /^((?:\d{2,}:)?\d{2}:\d{2}[,.]\d{3})\s+-->\s+((?:\d{2,}:)?\d{2}:\d{2}[,.]\d{3})(?:\s+(.*))?$/;
+function millis(value) {
+  const parts = value.replace(',', '.').split(':');
+  if (parts.length === 2) parts.unshift('0');
+  const [h, m] = parts.slice(0, 2).map(Number);
+  const [s, ms] = parts[2].split('.').map(Number);
+  const total = ((h * 60 + m) * 60 + s) * 1000 + ms;
+  if (m >= 60 || s >= 60 || !Number.isSafeInteger(total)) throw Error('Invalid timestamp: ' + value);
+  return total;
+}
+function stamp(ms, vtt = false) {
+  const pad = (n, width = 2) => String(n).padStart(width, '0');
+  return `${pad(Math.floor(ms / 3600000))}:${pad(Math.floor(ms / 60000) % 60)}:${pad(Math.floor(ms / 1000) % 60)}${vtt ? '.' : ','}${pad(ms % 1000, 3)}`;
+}
+function analyze(source) {
+  const normalized = source.replace(/^\uFEFF/, '').replace(/\r\n?/g, '\n').trim();
+  if (!normalized) throw Error('Add an SRT or WebVTT file to begin.');
+  const cues = [], notices = [];
+  normalized.split(/\n[ \t]*\n/).forEach((block, i) => {
+    const lines = block.split('\n');
+    if (/^WEBVTT(?:\s|$)/.test(lines[0]) || /^(NOTE|STYLE|REGION)(?:\s|$)/.test(lines[0])) {
+      notices.push('WebVTT header, notes and styling blocks are excluded from SRT output.');
+      return;
+    }
+    const at = lines[0].includes('-->') ? 0 : 1;
+    const match = timing.exec((lines[at] || '').trim());
+    if (!match) throw Error(`Block ${i + 1}: timestamp not recognized. No output generated.`);
+    const start = millis(match[1]), end = millis(match[2]);
+    const text = lines.slice(at + 1).map(s => s.trimEnd()).join('\n').trim();
+    if (end <= start || !text) throw Error(`Block ${i + 1}: ${!text ? 'empty subtitle' : 'end must follow start'}. No output generated.`);
+    if (match[3]) notices.push('WebVTT positioning settings are excluded from SRT output.');
+    cues.push({ start, end, text });
+  });
+  if (!cues.length) throw Error('No subtitle cues found.');
+  const issues = [];
+  cues.forEach((c, i) => {
+    const prev = cues[i - 1];
+    const add = (code, detail) => issues.push({ cue: i + 1, start: stamp(c.start), code, detail });
+    if (prev && c.start < prev.start) add('Out of order', 'Starts before the previous cue. Order preserved.');
+    if (prev && c.start < prev.end) add('Overlap', 'Overlaps the previous cue. Timing preserved.');
+    const plain = c.text.replace(/<[^>]*>/g, '');
+    const cps = [...plain.replace(/\s/g, '')].length * 1000 / (c.end - c.start);
+    if (cps > 20) add('Reading speed', `${cps.toFixed(1)} characters/sec. Language-dependent heuristic.`);
+    if (c.end - c.start < 500) add('Short duration', 'Less than 500 ms.');
+    if (plain.split('\n').some(line => [...line].length > 42)) add('Long line', 'More than 42 characters. Heuristic.');
+    if (prev && prev.text === c.text) add('Repeated text', 'Matches the previous cue. Text preserved.');
+  });
+  return { cues, issues, notices: [...new Set(notices)], output: cues.map((c, i) => `${i + 1}\n${stamp(c.start)} --> ${stamp(c.end)}\n${c.text}`).join('\n\n') + '\n' };
+}
+
+
+const el = id => document.getElementById(id);
+const sample = `9\n00:00:01.000 --> 00:00:03.000\nA small example, with the original words preserved.\n\n17\n00:00:02.900 --> 00:00:04.000\nThis cue overlaps.\n\n23\n00:00:04.000 --> 00:00:04.300\nA quick cue.`;
+let current = null;
+let sourceName = 'subtitles';
+function error(message) {
+  current = null;
+  el('result').replaceChildren();
+  const node = document.createElement('div'); node.className = 'error'; node.textContent = message;
+  el('result').append(node); el('state-label').textContent = 'NEEDS ATTENTION';
+}
+function download(text, type, name) {
+  const url = URL.createObjectURL(new Blob([text], {type}));
+  const a = document.createElement('a'); a.href = url; a.download = name; a.click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+el('example').onclick = () => { el('source').value = sample; sourceName = 'sample'; el('file').value = ''; current = null; el('check').click(); };
+el('file').onchange = async () => {
+  current = null;
+  const file = el('file').files[0]; if (!file) return;
+  if (file.size > 2 * 1024 * 1024) { el('source').value = ''; error('Choose a file smaller than 2 MB.'); return; }
+  try {
+    const text = new TextDecoder('utf-8', {fatal:true}).decode(await file.arrayBuffer());
+    el('source').value = text; sourceName = file.name.replace(/\.[^.]+$/, '') || 'subtitles';
+    el('check').click();
+  } catch { el('source').value = ''; error('Could not read this file as UTF-8. Export it as UTF-8 and try again.'); }
+};
+el('source').oninput = () => { current = null; el('result').replaceChildren(); el('state-label').textContent = 'CHECK UPDATED TEXT'; };
+el('check').onclick = () => {
+  try {
+    if (new Blob([el('source').value]).size > 2 * 1024 * 1024) throw Error('Text exceeds the 2 MB limit.');
+    current = analyze(el('source').value);
+    const root = document.createElement('div'); root.className = 'inside';
+    root.innerHTML = '<div class="stats"><div class="stat"><b id="cue-count"></b><span>Cues parsed</span></div><div class="stat"><b id="issue-count"></b><span>Review flags</span></div></div><p class="note"></p><div class="issue-list"></div><div class="downloads"><button id="srt">Download SRT</button><button id="json">Download QA report</button></div>';
+    el('result').replaceChildren(root);
+    el('cue-count').textContent = current.cues.length; el('issue-count').textContent = current.issues.length;
+    const note = root.querySelector('.note');
+    note.textContent = (current.issues.length ? 'Flags are suggestions for review. Timings and words have not been changed.' : 'No flags under these structural heuristics. Audio sync and language accuracy still need separate review.') + (current.notices.length ? ' ' + current.notices.join(' ') : '');
+    if (!current.issues.length) note.classList.add('good');
+    const list = root.querySelector('.issue-list');
+    current.issues.forEach(issue => {
+      const row = document.createElement('div'); row.className = 'issue';
+      const cue = document.createElement('div'); cue.className = 'cue'; cue.textContent = `CUE ${issue.cue}`;
+      const body = document.createElement('div'), title = document.createElement('strong'), detail = document.createElement('p');
+      title.textContent = issue.code; detail.textContent = issue.detail; body.append(title, detail); row.append(cue, body); list.append(row);
+    });
+    el('state-label').textContent = 'CHECK COMPLETE';
+    el('srt').onclick = () => current && download(current.output, 'application/x-subrip;charset=utf-8', sourceName + '.normalized.srt');
+    el('json').onclick = () => current && download(JSON.stringify({ source:sourceName, cues:current.cues.length, issues:current.issues, notices:current.notices, scope:'Structural heuristics only; words, order and timing preserved. No audio or language review.' }, null, 2), 'application/json', sourceName + '.qa.json');
+  } catch (e) { error(e.message); }
+};
+
+</script></body></html>
