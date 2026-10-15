@@ -1,0 +1,13 @@
+{
+  "origin": "Self-authored synthetic exercise for a work sample; no client or INK TO BRICK model",
+  "units": "metres",
+  "outer_width": 8.0,
+  "outer_depth": 6.0,
+  "wall_thickness": 0.2,
+  "wall_height": 2.7,
+  "partition_x": 4.0,
+  "door_y_start": 2.0,
+  "door_clear_width": 0.9,
+  "tolerance": 0.001,
+  "unresolved": "Opening head height and lintel details are not supplied; only the clear gap in plan is checked. No structural checks are covered."
+}

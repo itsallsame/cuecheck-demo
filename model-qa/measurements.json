@@ -1,0 +1,379 @@
+{
+  "provenance": "Self-authored synthetic exercise for a work sample; no client or INK TO BRICK model",
+  "blender_version": "5.1.2",
+  "reference": "source-spec.json",
+  "tolerance_m": 0.001,
+  "results": {
+    "before": {
+      "blend_measurement": {
+        "mesh_bounds": {
+          "west": {
+            "min": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max": [
+              0.20000000298023224,
+              6.0,
+              2.700000047683716
+            ]
+          },
+          "east": {
+            "min": [
+              8.0,
+              0.0,
+              0.0
+            ],
+            "max": [
+              8.200000762939453,
+              6.0,
+              2.700000047683716
+            ]
+          },
+          "south": {
+            "min": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max": [
+              8.199999809265137,
+              0.20000000298023224,
+              2.700000047683716
+            ]
+          },
+          "north": {
+            "min": [
+              0.0,
+              5.800000190734863,
+              0.0
+            ],
+            "max": [
+              8.199999809265137,
+              6.0,
+              2.700000047683716
+            ]
+          },
+          "partition_south": {
+            "min": [
+              3.9000000953674316,
+              0.20000004768371582,
+              0.0
+            ],
+            "max": [
+              4.099999904632568,
+              2.0,
+              2.700000047683716
+            ]
+          },
+          "partition_north": {
+            "min": [
+              3.9000000953674316,
+              2.5999999046325684,
+              0.0
+            ],
+            "max": [
+              4.099999904632568,
+              5.799999713897705,
+              2.700000047683716
+            ]
+          }
+        },
+        "outer_width": 8.200000762939453,
+        "outer_depth": 6.0,
+        "door_clear_width": 0.5999999046325684
+      },
+      "glb_reimport_measurement": {
+        "mesh_bounds": {
+          "west": {
+            "min": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max": [
+              0.20000000298023224,
+              6.0,
+              2.700000047683716
+            ]
+          },
+          "east": {
+            "min": [
+              8.0,
+              0.0,
+              0.0
+            ],
+            "max": [
+              8.200000762939453,
+              6.0,
+              2.700000047683716
+            ]
+          },
+          "south": {
+            "min": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max": [
+              8.199999809265137,
+              0.20000000298023224,
+              2.700000047683716
+            ]
+          },
+          "north": {
+            "min": [
+              0.0,
+              5.800000190734863,
+              0.0
+            ],
+            "max": [
+              8.199999809265137,
+              6.0,
+              2.700000047683716
+            ]
+          },
+          "partition_south": {
+            "min": [
+              3.9000000953674316,
+              0.20000004768371582,
+              0.0
+            ],
+            "max": [
+              4.099999904632568,
+              2.0,
+              2.700000047683716
+            ]
+          },
+          "partition_north": {
+            "min": [
+              3.9000000953674316,
+              2.5999999046325684,
+              0.0
+            ],
+            "max": [
+              4.099999904632568,
+              5.799999713897705,
+              2.700000047683716
+            ]
+          }
+        },
+        "outer_width": 8.200000762939453,
+        "outer_depth": 6.0,
+        "door_clear_width": 0.5999999046325684
+      },
+      "checks": [
+        {
+          "check": "outer_width",
+          "expected_m": 8.0,
+          "actual_m": 8.200001,
+          "status": "fail"
+        },
+        {
+          "check": "outer_depth",
+          "expected_m": 6.0,
+          "actual_m": 6.0,
+          "status": "pass"
+        },
+        {
+          "check": "door_clear_width",
+          "expected_m": 0.9,
+          "actual_m": 0.6,
+          "status": "fail"
+        }
+      ],
+      "export_roundtrip_max_delta_m": 0.0
+    },
+    "after": {
+      "blend_measurement": {
+        "mesh_bounds": {
+          "west": {
+            "min": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max": [
+              0.20000000298023224,
+              6.0,
+              2.700000047683716
+            ]
+          },
+          "east": {
+            "min": [
+              7.800000190734863,
+              0.0,
+              0.0
+            ],
+            "max": [
+              8.0,
+              6.0,
+              2.700000047683716
+            ]
+          },
+          "south": {
+            "min": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max": [
+              8.0,
+              0.20000000298023224,
+              2.700000047683716
+            ]
+          },
+          "north": {
+            "min": [
+              0.0,
+              5.800000190734863,
+              0.0
+            ],
+            "max": [
+              8.0,
+              6.0,
+              2.700000047683716
+            ]
+          },
+          "partition_south": {
+            "min": [
+              3.9000000953674316,
+              0.20000004768371582,
+              0.0
+            ],
+            "max": [
+              4.099999904632568,
+              2.0,
+              2.700000047683716
+            ]
+          },
+          "partition_north": {
+            "min": [
+              3.9000000953674316,
+              2.8999998569488525,
+              0.0
+            ],
+            "max": [
+              4.099999904632568,
+              5.800000190734863,
+              2.700000047683716
+            ]
+          }
+        },
+        "outer_width": 8.0,
+        "outer_depth": 6.0,
+        "door_clear_width": 0.8999998569488525
+      },
+      "glb_reimport_measurement": {
+        "mesh_bounds": {
+          "west": {
+            "min": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max": [
+              0.20000000298023224,
+              6.0,
+              2.700000047683716
+            ]
+          },
+          "east": {
+            "min": [
+              7.800000190734863,
+              0.0,
+              0.0
+            ],
+            "max": [
+              8.0,
+              6.0,
+              2.700000047683716
+            ]
+          },
+          "south": {
+            "min": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max": [
+              8.0,
+              0.20000000298023224,
+              2.700000047683716
+            ]
+          },
+          "north": {
+            "min": [
+              0.0,
+              5.800000190734863,
+              0.0
+            ],
+            "max": [
+              8.0,
+              6.0,
+              2.700000047683716
+            ]
+          },
+          "partition_south": {
+            "min": [
+              3.9000000953674316,
+              0.20000004768371582,
+              0.0
+            ],
+            "max": [
+              4.099999904632568,
+              2.0,
+              2.700000047683716
+            ]
+          },
+          "partition_north": {
+            "min": [
+              3.9000000953674316,
+              2.8999998569488525,
+              0.0
+            ],
+            "max": [
+              4.099999904632568,
+              5.800000190734863,
+              2.700000047683716
+            ]
+          }
+        },
+        "outer_width": 8.0,
+        "outer_depth": 6.0,
+        "door_clear_width": 0.8999998569488525
+      },
+      "checks": [
+        {
+          "check": "outer_width",
+          "expected_m": 8.0,
+          "actual_m": 8.0,
+          "status": "pass"
+        },
+        {
+          "check": "outer_depth",
+          "expected_m": 6.0,
+          "actual_m": 6.0,
+          "status": "pass"
+        },
+        {
+          "check": "door_clear_width",
+          "expected_m": 0.9,
+          "actual_m": 0.9,
+          "status": "pass"
+        }
+      ],
+      "export_roundtrip_max_delta_m": 0.0
+    }
+  },
+  "not_checked": [
+    "IFC/BIM semantics",
+    "multi-floor connectivity",
+    "structural suitability",
+    "building-code compliance",
+    "real site measurements",
+    "INK TO BRICK editor behavior"
+  ],
+  "unresolved": "Opening head height and lintel details are not supplied; only the clear gap in plan is checked. No structural checks are covered."
+}
