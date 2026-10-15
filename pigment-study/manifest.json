@@ -1,0 +1,11 @@
+{
+  "blender": "5.1.2",
+  "engine": "BLENDER_EEVEE",
+  "source": "pigment-study.blend",
+  "renders": [
+    "study-front.png",
+    "study-detail.png"
+  ],
+  "dependencies": "Blender only. All meshes and procedural materials made in build.py. No external assets.",
+  "verified_scope": "Two still renders only. No claim animated-scene temporal stability, client work, commercial painterly portfolio, or compatibility with Cycles. EEVEE Shader to RGB materials."
+}
