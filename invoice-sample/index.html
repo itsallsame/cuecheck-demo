@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CSV / JSON to invoice PDFs - itsallsame sample</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f6f5ef;color:#243431;font:17px/1.65 system-ui,sans-serif}main{max-width:1040px;margin:auto;padding:36px 24px 70px}a{color:#176c5c;text-underline-offset:4px}a:focus-visible{outline:3px solid #bc623a;outline-offset:5px}h1{max-width:780px;font-size:clamp(32px,5vw,54px);line-height:1.15;letter-spacing:-1.5px;margin:42px 0 24px}h2{font-size:22px}p{max-width:780px}.note{padding:14px 18px;background:#e5ede7;border-left:3px solid #147d70}.documents{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin:32px 0}.documents figure{margin:0}.documents img{width:100%;height:auto;border:1px solid #d5ddd7;display:block}.documents figcaption{margin:12px 0}section{border-top:1px solid #cbd4cc;margin-top:30px;padding-top:14px}code{font-size:.9em}small{color:#526359}@media(max-width:650px){.documents{grid-template-columns:1fr}main{padding:24px 18px 50px}}
+</style><main>
+<a href="../hire.html">itsallsame / 小范围交付</a>
+<h1>One data file.<br>An invoice and matching receipt.</h1>
+<p>CSV / JSON 输入，生成单品牌 PDF 发票与配套收据。这里展示的是可运行原型生成的合成样例，用于核对版式、金额和交付范围。</p>
+<p class="note"><strong>Synthetic sample. No payment received.</strong><br>AI-assisted, self-made demonstration. Fictional business and customer; not a client case, valid invoice or proof of payment.</p>
+<div class="documents">
+<figure><a href="sample-invoice.pdf"><img src="invoice.png" width="745" height="1053" alt="Synthetic invoice with two line items and sample total INR 3540.00"></a><figcaption><a href="sample-invoice.pdf">Open invoice PDF / 发票样例</a></figcaption></figure>
+<figure><a href="sample-receipt.pdf"><img src="receipt.png" width="745" height="1053" alt="Matching synthetic receipt clearly marked not valid for payment"></a><figcaption><a href="sample-receipt.pdf">Open receipt PDF / 收据样例</a></figcaption></figure>
+</div>
+<section><h2>What this prototype demonstrates</h2>
+<p>The same two item rows in CSV and JSON produce matching document text and totals: INR 3,000.00 subtotal, INR 540.00 sample tax and INR 3,540.00 total. Brand text, address, accent, currency and tax label are configuration fields.</p>
+<p>Checks cover decimal rounding, rejection of four malformed/invalid input cases, and an 18-row long-description invoice spanning three pages. All five rendered pages were visually reviewed.</p>
+<p><a href="items.csv">Example CSV</a> · <a href="items.json">Example JSON</a> · <a href="long-invoice.pdf">Pagination example</a></p>
+</section>
+<section><h2>Before a paid build / 合作前确认</h2>
+<p>Send one anonymized input, the fields and branding you need, and an example of the intended layout. I will confirm a fixed scope, price, delivery date and acceptance checks before starting paid work.</p>
+<p>This sample handles one invoice per file, one brand and English/Latin text. Google Sheets input, customer-specific fonts and branding, and production receipt rules are still to be agreed and implemented. Sample rounding and tax settings are demonstrations, not customer-approved rules.</p>
+<p><a href="mailto:brokerloadbrew@gmail.com?subject=CSV%20PDF%20sample%20enquiry">brokerloadbrew@gmail.com</a><br>国内联系：JustAI768，邮件也可直接沟通。</p>
+</section>
+<small>Self-directed prototype, October 2026. No paid customer delivery or recurring revenue is claimed.</small>
+</main></html>
